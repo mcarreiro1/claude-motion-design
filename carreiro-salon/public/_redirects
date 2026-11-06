@@ -1,0 +1,21 @@
+# Old Squarespace URLs -> new pages, so old links and search results keep working
+/about                 /meet-the-team   301
+/carreiro-locations    /contact         301
+/events                /news            301
+/events/*              /news            301
+/news/category/*       /news            301
+/all                   https://carreirosalon.zenoti.com/WebstoreNew   301
+/shop                  https://carreirosalon.zenoti.com/WebstoreNew   301
+/cart                  https://carreirosalon.zenoti.com/WebstoreNew   301
+/gift-cards            https://carreirosalon.zenoti.com/webstoreNew/giftcards/451d915c-c74d-4cfe-8830-e6ff97b4ba68   301
+/book                  https://carreirosalon.zenoti.com/WebstoreNew   301
+/news/aveda-smooth-infusion-sale    /news    301
+/news/featuring-aro    /news    301
+/news/free-conditioning-treatment    /news    301
+/news/happy-new-year    /news    301
+/news/julys-mask-update    /news    301
+/news/k-water-treatment    /news    301
+/news/kerastase-nutritive-sale    /news    301
+/news/now-carrying-chronologiste    /news    301
+/news/operating-during-covid-19    /news    301
+/news/spring-giveaway    /news    301

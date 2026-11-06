@@ -1,0 +1,15 @@
+# Deploy: connect this repo in Netlify with base directory "carreiro-salon",
+# or drag the "public" folder onto app.netlify.com/drop.
+[build]
+  publish = "public"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
