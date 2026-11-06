@@ -1,5 +1,5 @@
 /* Carreiro Studio Salon
-   Layout concept: "the gallery downstairs" - white walls, black ink, one purple
+   Layout concept: "the gallery" - white walls, black ink, one purple
    accent taken from the dot in the logo. Photos hang like artworks with small
    wall labels; the service menu is a row of placards. */
 :root {
@@ -472,3 +472,9 @@ details.full-review .review-body { display: grid; gap: 14px; color: var(--graphi
 
 /* ---------- utilities ---------- */
 .mt-s { margin-top: 16px; } .mt-m { margin-top: 32px; } .mt-l { margin-top: clamp(40px, 6vw, 72px); }
+
+/* ---------- owners ---------- */
+.owners { display: grid; gap: clamp(56px, 8vw, 112px); }
+.owner .frame { aspect-ratio: 4 / 5; }
+.monogram { display: grid; place-items: center; background: var(--ink); }
+.monogram span { font-family: var(--display); font-size: clamp(4rem, 12vw, 9rem); color: var(--lilac); }

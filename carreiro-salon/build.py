@@ -163,7 +163,7 @@ POSTS = [
         "excerpt": "As we approach the end of the year, we want to take a moment to thank you for a wonderful year.",
         "body": """
 <p>As we approach the end of the year, we want to take a moment to thank you for a wonderful year! We truly appreciate each and every one of you.</p>
-<p>It's been an eventful year. The closure of our flagship downtown location was a big change, but we have all settled in to our wonderful Broadmead location and our Duncan location continues to grow!</p>
+<p>It's been an eventful year. Our Broadmead team is thriving and our Duncan location continues to grow!</p>
 <h2>Black Friday is just around the corner!</h2>
 <p>November 25th to December 2nd we have 20% off all Aveda and Kérastase products! (Excluding gift packs, and price will be applied at checkout.)</p>
 <p>We have always been a salon that strives to give back. We supported both local and international charities this year. In April we raised money for our Earth Month charity Mary's Meals, Ricardo donated his hair to Wigs for Kids and the salon raised money for the Cops for Cancer Tour de Rock! We want to finish off our year of giving in a personal way. Starting November 1st to December 15th, if you bring in a new, unwrapped toy, you'll receive a complimentary hair treatment as our thank you for supporting the Zone's toy drive in memory of the beloved Victoria radio host, Dylan Willows.</p>
@@ -224,7 +224,7 @@ POSTS = [
         "img_alt": "Quality Business Awards 2023 badge for Carreiro Studio Salon",
         "excerpt": "The Quality Business Awards recognizes businesses that achieve an average quality score of 95% or greater.",
         "body": """
-<p>Carreiro Studio Salon Victoria achieved an overall quality score of 95% or greater.</p>
+<p>Carreiro Studio Salon achieved an overall quality score of 95% or greater.</p>
 <p>The Quality Business Awards recognizes businesses that achieve an average quality score of 95% or greater over the previous 12 months. To learn more about the selection criteria, please visit <a href="http://www.qualitybusinessawards.ca/about-us">qualitybusinessawards.ca</a>.</p>
 """,
     },
@@ -270,6 +270,7 @@ ICON_YT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 
 
 NAV = [
     ("our-story.html", "Our Story", "story"),
+    ("owners.html", "Owners", "owners"),
     ("meet-the-team.html", "Team", "team"),
     ("index.html#menu", "Services", "services"),
     ("news.html", "News", "news"),
@@ -308,6 +309,7 @@ def schema_salons():
                 for h in loc["schema_hours"]
             ],
             "sameAs": [INSTAGRAM, FACEBOOK, YOUTUBE],
+            "foundingDate": "2005",
             "parentOrganization": {"@type": "Organization", "name": "Platino Salon Group"},
         })
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
@@ -387,7 +389,7 @@ def page(path, *, title, desc, body, active=None, og_image="og-image.jpg", schem
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="{p}assets/img/carreiro-logo.png" alt="Carreiro Studio Salon" width="984" height="196" loading="lazy">
-        <p>A salon, spa, barbershop and academy, led by master stylist John Carreiro. In Broadmead and downtown Duncan.</p>
+        <p>A salon, spa, barbershop and academy. Established 2005. In Broadmead and downtown Duncan.</p>
         <div class="socials">
           <a href="{INSTAGRAM}" aria-label="Instagram">{ICON_IG}</a>
           <a href="{FACEBOOK}" aria-label="Facebook">{ICON_FB}</a>
@@ -399,6 +401,7 @@ def page(path, *, title, desc, body, active=None, og_image="og-image.jpg", schem
         <h4>Learn</h4>
         <ul>
           <li><a href="{p}our-story.html">Our Story</a></li>
+          <li><a href="{p}owners.html">Owners &amp; Founders</a></li>
           <li><a href="{p}meet-the-team.html">Team</a></li>
           <li><a href="{p}news.html">News</a></li>
           <li><a href="{p}terms-conditions.html">Terms &amp; Conditions</a></li>
@@ -417,7 +420,7 @@ def page(path, *, title, desc, body, active=None, og_image="og-image.jpg", schem
       </div>
     </div>
     <div class="footer-bottom">
-      <span>©2026 Carreiro Studio Salon. Part of Platino Salon Group. All rights reserved.</span>
+      <span>Est. 2005 · ©2026 Carreiro Studio Salon. Part of Platino Salon Group. All rights reserved.</span>
       <span>create. sculpt. form. hair</span>
     </div>
   </div>
@@ -514,7 +517,7 @@ def build_home():
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="asterism">❋</span> Located in Broadmead &amp; Duncan</p>
+      <p class="eyebrow"><span class="asterism">❋</span> Est. 2005 · Broadmead &amp; Duncan</p>
       <h1 class="hero-title" aria-label="create. sculpt. form. hair"><span>create.</span><span>sculpt.</span><span>form.</span><span>hair</span></h1>
       <p class="lede">A salon, spa, barbershop and academy. Inspired by European spas that honour your body, Carreiro pays tribute to your hair.</p>
       <div class="btn-row">
@@ -524,7 +527,7 @@ def build_home():
     </div>
     <figure class="artwork hero-art">
       <div class="frame"><img src="{{P}}assets/img/hero-trendvision.webp" alt="Editorial portrait of a model with a glossy copper-red bob" width="1170" height="1167" fetchpriority="high"></div>
-      <figcaption class="wall-label"><b>Gold, Wella Trendvision Awards Canada</b><span>John Carreiro, 2017</span></figcaption>
+      <figcaption class="wall-label"><b>Gold, Wella Trendvision Awards Canada</b><span>Carreiro Studio Salon, 2017</span></figcaption>
     </figure>
   </div>
 </section>
@@ -533,7 +536,7 @@ def build_home():
   <div class="wrap statement-grid">
     <h2 class="statement" id="intro-title">We are a hair salon on paper. We assure you, we are <em>much, much more…</em></h2>
     <div class="stack">
-      <p class="lede">A salon, spa, barbershop and academy. Most of all, a place to relax and unwind. Led by master stylist John Carreiro, our talented hair artists are dedicated to making your visit an experience.</p>
+      <p class="lede">A salon, spa, barbershop and academy. Most of all, a place to relax and unwind. Since 2005, our talented hair artists have been dedicated to making your visit an experience.</p>
       <a class="link-arrow" href="{{P}}our-story.html" style="justify-self:start">Read our story →</a>
     </div>
   </div>
@@ -568,7 +571,7 @@ def build_home():
     <div class="stack" style="gap:28px">
       <p class="eyebrow"><span class="asterism">❋</span> What to expect</p>
       <h2 class="h-lg" id="expect-title">leave the outside world <em>outside</em></h2>
-      <p class="lede">After being greeted, walk down the stairs and enter your own personal world. “What happened to all the noise of traffic?” That’s usually the second impression.</p>
+      <p class="lede">Our goal is to have you forget the outside world, well… leave it outside at least. From the moment you’re greeted, the visit is about you.</p>
       <ul class="ritual">
         <li><span>I</span>Warm greetings and a friendly smile</li>
         <li><span>II</span>Soothing signature tea</li>
@@ -578,7 +581,7 @@ def build_home():
     </div>
     <figure class="artwork">
       <div class="frame" style="aspect-ratio:4/5"><img src="{{P}}assets/img/mood-wash-chairs.webp" alt="Black shampoo chairs in the quiet wash area" loading="lazy"></div>
-      <figcaption class="wall-label"><b>The wash room</b><span>Downstairs, away from the street</span></figcaption>
+      <figcaption class="wall-label"><b>The wash room</b><span>Time to unwind</span></figcaption>
     </figure>
   </div>
 </section>
@@ -605,7 +608,7 @@ def build_home():
     <div class="gallery">
       <figure class="artwork">
         <div class="frame"><img src="{{P}}assets/img/work-blonde-grey-blend.webp" alt="Long curled hair in a bright blonde and grey blend" loading="lazy"></div>
-        <figcaption class="wall-label"><b>Blonde / grey blend</b><span>John Carreiro · Duncan</span></figcaption>
+        <figcaption class="wall-label"><b>Blonde / grey blend</b><span>Carreiro · Duncan</span></figcaption>
       </figure>
       <figure class="artwork">
         <div class="frame"><img src="{{P}}assets/img/work-creamy-balayage.webp" alt="Long straight hair with a creamy blonde balayage and layers" loading="lazy"></div>
@@ -679,7 +682,7 @@ def build_home():
 </section>
 {SIGNUP}'''
     return page("index.html", title="Carreiro Studio Salon | Hair Salon in Broadmead & Duncan, BC",
-                desc="Carreiro Studio Salon is a salon, spa, barbershop and academy led by master stylist John Carreiro, with studios in Broadmead (Saanich) and downtown Duncan, BC. Reserve online.",
+                desc="Carreiro Studio Salon is a salon, spa, barbershop and academy established in 2005, with studios in Broadmead (Saanich) and downtown Duncan, BC. Reserve online.",
                 body=body, schema=schema_salons())
 
 
@@ -687,7 +690,7 @@ def build_story():
     body = f'''
 <section class="page-head">
   <div class="wrap">
-    <p class="eyebrow"><span class="asterism">❋</span> Our story</p>
+    <p class="eyebrow"><span class="asterism">❋</span> Our story · Est. 2005</p>
     <h1 class="h-xl">a salon, spa, barbershop <em>and academy</em></h1>
   </div>
 </section>
@@ -695,8 +698,8 @@ def build_story():
 <section class="section--tight" style="padding-top:0">
   <div class="wrap">
     <figure class="artwork figure-wide">
-      <div class="frame"><img src="{{P}}assets/img/story-john-trendvision.webp" alt="John Carreiro beside his gold-winning Trendvision look, a model with a copper-red bob" width="1500" height="1125"></div>
-      <figcaption class="wall-label"><b>John Carreiro</b><span>Master stylist and owner, with his 2017 Wella Trendvision gold look</span></figcaption>
+      <div class="frame"><img src="{{P}}assets/img/mood-wash-bowls.webp" alt="A row of black shampoo bowls in the studio" width="1500" height="1000"></div>
+      <figcaption class="wall-label"><b>Carreiro Studio Salon</b><span>Caring for hair since 2005</span></figcaption>
     </figure>
   </div>
 </section>
@@ -705,27 +708,27 @@ def build_story():
   <div class="wrap split split--top">
     <h2 class="h-lg">we are a hair salon <em>on paper</em></h2>
     <div class="prose">
-      <p class="dropcap">We assure you, we are much, much more… a salon, spa, barbershop and academy. Most of all, a place to relax and unwind. Inspired by European spas that honour your body, Carreiro pays tribute to your hair. Led by master stylist John Carreiro, our talented hair artists are dedicated to making your visit an experience.</p>
-      <p>At times, passers-by mistake us for an art gallery on first impression, but when you choose to walk in, all that changes. Our goal is to have you forget the outside world, well… leave it outside at least. After being greeted, walk down the stairs and enter your own personal world. “What happened to all the noise of traffic?” That’s usually the second impression.</p>
+      <p class="dropcap">We assure you, we are much, much more… a salon, spa, barbershop and academy. Most of all, a place to relax and unwind. Inspired by European spas that honour your body, Carreiro pays tribute to your hair. Our talented hair artists are dedicated to making your visit an experience.</p>
+      <p>Since 2005, our goal has been to have you forget the outside world, well… leave it outside at least. Sleek and sophisticated, our studios provide the perfect atmosphere for creativity and personal excellence.</p>
     </div>
   </div>
 </section>
 
-<section class="band-ink section" aria-labelledby="john-title">
+<section class="band-ink section" aria-labelledby="studios-title">
   <div class="wrap">
     <div class="split split--top">
       <div class="stack" style="gap:24px">
-        <p class="eyebrow"><span class="asterism">❋</span> Led by John Carreiro</p>
-        <h2 class="h-lg" id="john-title">a care space for hair that is very much <em>his own</em></h2>
+        <p class="eyebrow"><span class="asterism">❋</span> Two studios</p>
+        <h2 class="h-lg" id="studios-title">Broadmead <em>&amp;</em> Duncan</h2>
       </div>
       <div class="stack" style="gap:20px">
-        <p class="lede">After 25 years of international experience as a platform artist, mentor, product educator and salon manager, John created a care space for hair that is very much his own. Sleek and sophisticated, it provides the perfect atmosphere for creativity and personal excellence.</p>
-        <p class="lede">Passionate about his industry, John mentors our studio artists, from the most seasoned stylists to new talent, to ensure they are the best in the profession.</p>
+        <p class="lede">Today you’ll find us in Broadmead, at 410-777 Royal Oak Drive in Saanich, and on Craig Street in downtown Duncan. Our studio artists, from the most seasoned stylists to new talent, are mentored to be the best in the profession.</p>
+        <div class="btn-row"><a class="btn" href="{{P}}contact.html">Locations &amp; hours</a><a class="btn btn--ghost" href="{{P}}owners.html">Owners &amp; founders</a></div>
       </div>
     </div>
     <dl class="facts mt-l">
-      <div><dt>25 years</dt><dd>of international experience</dd></div>
-      <div><dt>Platform artist</dt><dd>mentor, product educator and salon manager</dd></div>
+      <div><dt>2005</dt><dd>established</dd></div>
+      <div><dt>2 studios</dt><dd>Broadmead and downtown Duncan</dd></div>
       <div><dt>2017 Gold</dt><dd>Wella Trendvision Awards Canada</dd></div>
       <div><dt>95%+</dt><dd>Quality Business Awards, Best Hair Salon in Victoria, 2023</dd></div>
     </dl>
@@ -735,7 +738,7 @@ def build_story():
 <section class="section">
   <div class="wrap split">
     <figure class="artwork">
-      <div class="frame" style="aspect-ratio:3/2"><img src="{{P}}assets/img/mood-wash-bowls.webp" alt="A row of black shampoo bowls" loading="lazy"></div>
+      <div class="frame" style="aspect-ratio:4/5"><img src="{{P}}assets/img/work-creamy-balayage.webp" alt="Long hair with a creamy blonde balayage" loading="lazy"></div>
     </figure>
     <div class="stack" style="gap:24px">
       <p class="eyebrow"><span class="asterism">❋</span> Together</p>
@@ -755,14 +758,68 @@ def build_story():
     <div class="prose">
       <p>We support both local and international charities. We have raised money for our Earth Month charity Mary’s Meals, our team has donated hair to Wigs for Kids, and the salon has raised money for the Cops for Cancer Tour de Rock.</p>
       <p>Every holiday season we collect new, unwrapped toys for The Zone radio’s Willows Family Memorial Toy Drive, in memory of the beloved Victoria radio host Dylan Willows. Every guest who brings in a toy receives a complimentary deep conditioning treatment as our thank you.</p>
-      <p>John also rides in The Distinguished Gentleman’s Ride, raising funds and awareness for prostate cancer and men’s mental health on behalf of Movember. <a href="{{P}}news/distinguished-gentlemans-ride.html">Read John’s note →</a></p>
+      <p>We also ride in The Distinguished Gentleman’s Ride, raising funds and awareness for prostate cancer and men’s mental health on behalf of Movember. <a href="{{P}}news/distinguished-gentlemans-ride.html">Read more →</a></p>
     </div>
   </div>
 </section>
 {SIGNUP}'''
     return page("our-story.html", title="Our Story", active="story",
-                desc="Carreiro Studio Salon is a hair salon on paper, and much more: a salon, spa, barbershop and academy led by master stylist John Carreiro.",
+                desc="Established in 2005, Carreiro Studio Salon is a hair salon on paper, and much more: a salon, spa, barbershop and academy in Broadmead and Duncan, BC.",
                 body=body)
+
+
+# Owners & founders. Add more people here as {"name", "role", "img" (or None), "bio": [paragraphs]}.
+OWNERS = [
+    {"name": "John Carreiro", "role": "Founder · Owner · Master stylist", "img": "team-john.webp",
+     "bio": ["After 25 years of international experience as a platform artist, mentor, product educator and salon manager, John founded Carreiro in 2005 as a care space for hair that is very much his own.",
+             "Passionate about his industry, John mentors our studio artists, from the most seasoned stylists to new talent, to ensure they are the best in the profession. His work earned gold at the 2017 Wella Trendvision Awards Canada."]},
+]
+
+
+def build_owners():
+    people = []
+    for o in OWNERS:
+        initials = "".join(w[0] for w in o["name"].split()[:2])
+        photo = (f'<div class="frame"><img src="{{P}}assets/img/{o["img"]}" alt="Portrait of {o["name"]}"></div>' if o["img"]
+                 else f'<div class="frame monogram" aria-hidden="true"><span>{initials}</span></div>')
+        bio = "".join(f'<p class="lede">{p}</p>' for p in o["bio"])
+        people.append(f'''<article class="team-lead owner">
+  <figure class="artwork">{photo}</figure>
+  <div class="stack" style="gap:20px;padding-bottom:12px">
+    <p class="eyebrow">{o["role"]}</p>
+    <h2 class="h-lg">{o["name"]}</h2>
+    {bio}
+  </div>
+</article>''')
+    body = f'''
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><span class="asterism">❋</span> Owners &amp; founders · Est. 2005</p>
+    <h1 class="h-xl">the people <em>behind</em> Carreiro</h1>
+    <p class="lede">Carreiro Studio Salon was established in 2005 to redefine what a salon can be: exceptional service, unmatched expertise, every time.</p>
+  </div>
+</section>
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap owners">{"".join(people)}</div>
+</section>
+<section class="band-ink section--tight">
+  <div class="wrap facts-wrap">
+    <dl class="facts">
+      <div><dt>2005</dt><dd>Carreiro is established</dd></div>
+      <div><dt>2017</dt><dd>Gold, Wella Trendvision Awards Canada</dd></div>
+      <div><dt>2023</dt><dd>Quality Business Awards, Best Hair Salon in Victoria</dd></div>
+      <div><dt>Today</dt><dd>Two studios, in Broadmead and Duncan</dd></div>
+    </dl>
+  </div>
+</section>
+<section class="section--tight">
+  <div class="wrap section-head" style="margin-bottom:0">
+    <h2 class="h-lg">meet the <em>team</em></h2>
+    <div class="btn-row"><a class="btn" href="{{P}}meet-the-team.html">Our studio artists</a><a class="btn btn--ghost" href="{{P}}our-story.html">Our story</a></div>
+  </div>
+</section>'''
+    return page("owners.html", title="Owners & Founders", active="owners",
+                desc="Meet the owners and founders of Carreiro Studio Salon, established in 2005 in Greater Victoria and Duncan, BC.", body=body)
 
 
 def build_team():
@@ -779,20 +836,6 @@ def build_team():
     <div class="btn-row mt-m">
       <a class="btn" href="{BOOK_BROADMEAD}">Reserve Broadmead</a>
       <a class="btn btn--ghost" href="{BOOK_DUNCAN}">Reserve Duncan</a>
-    </div>
-  </div>
-</section>
-
-<section class="section--tight" style="padding-top:0">
-  <div class="wrap team-lead">
-    <figure class="artwork">
-      <div class="frame"><img src="{{P}}assets/img/team-john.webp" alt="Portrait of John Carreiro" width="900" height="1436"></div>
-    </figure>
-    <div class="stack" style="gap:24px;padding-bottom:12px">
-      <p class="eyebrow">Owner · Master stylist</p>
-      <h2 class="h-xl">John</h2>
-      <p class="lede">After 25 years of international experience as a platform artist, mentor, product educator and salon manager, John created a care space for hair that is very much his own. He mentors our studio artists, from the most seasoned stylists to new talent, to ensure they are the best in the profession.</p>
-      <a class="link-arrow" href="{{P}}our-story.html" style="justify-self:start">Our story →</a>
     </div>
   </div>
 </section>
@@ -814,7 +857,7 @@ def build_team():
   </div>
 </section>'''
     return page("meet-the-team.html", title="Meet the Team", active="team",
-                desc="Meet John Carreiro and the studio artists at Carreiro Studio Salon in Broadmead and Duncan, BC.", body=body)
+                desc="Meet the studio artists at Carreiro Studio Salon in Broadmead and Duncan, BC.", body=body)
 
 
 def build_contact():
@@ -1056,7 +1099,7 @@ def build_404():
 <section class="section">
   <div class="wrap notfound">
     <p class="eyebrow"><span class="asterism">❋</span> Page not found</p>
-    <h1 class="h-xl">this page has left <em>the gallery</em></h1>
+    <h1 class="h-xl">this page can’t be <em>found</em></h1>
     <p class="lede">The page you’re looking for has moved or no longer exists. Try the home page, or reserve your next visit.</p>
     <div class="btn-row"><a class="btn" href="/">Home</a><a class="btn btn--ghost" href="{BOOK_ANY}" data-reserve>Reserve</a></div>
   </div>
@@ -1065,7 +1108,7 @@ def build_404():
 
 
 def build_meta():
-    urls = ["", "our-story", "meet-the-team", "contact", "join", "news", "terms-conditions", "shipping"] + [
+    urls = ["", "our-story", "owners", "meet-the-team", "contact", "join", "news", "terms-conditions", "shipping"] + [
         f"news/{p['slug']}" for p in POSTS]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sm += "".join(f"  <url><loc>{SITE}/{u}</loc></url>\n" for u in urls)
@@ -1094,6 +1137,7 @@ def main():
     files = {
         "index.html": build_home(),
         "our-story.html": build_story(),
+        "owners.html": build_owners(),
         "meet-the-team.html": build_team(),
         "contact.html": build_contact(),
         "join.html": build_join(),
