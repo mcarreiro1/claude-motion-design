@@ -10,3 +10,6 @@ examples/*/probe/
 examples/*/out/
 __pycache__/
 .DS_Store
+
+# Generated reels stay local, not in git
+ASSETS/*.mp4
