@@ -17,7 +17,7 @@ for src in "$IN"/*.{mp4,mkv,webm,mov}; do
     out="$OUT/${base}_reel$(printf '%03d' $((i+1))).mp4"
     [ -s "$out" ] && continue
     ffmpeg -nostdin -v error -y -ss $((i*LEN)) -t "$LEN" -i "$src" \
-      -vf "$VF" -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p \
+      -vf "$VF" -c:v libx264 -preset medium -crf 27 -pix_fmt yuv420p \
       -c:a aac -b:a 128k -movflags +faststart "$out"
     echo "wrote $out"
   done
